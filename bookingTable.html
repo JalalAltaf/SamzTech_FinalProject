@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Table</title>
+  <link rel="stylesheet" href="bookingTable.css"/>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card" id="flip-card">
+      <div class="card-inner">
+        <!-- Front Side -->
+        <div class="card-front">
+          <h2>Reserve Your Table</h2>
+          <form id="bookingForm">
+          
+  <div class="form-group">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <span class="error" id="nameError"></span>
+  </div>
+
+  <div class="form-group">
+    <input type="email" id="email" placeholder="Your Email" required />
+    <span class="error" id="emailError"></span>
+  </div>
+
+  <div class="form-group">
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <span class="error" id="phoneError"></span>
+  </div>
+
+  <div class="form-group">
+    <input type="number" id="guests" placeholder="Persons" required />
+    <span class="error" id="guestsError"></span>
+  </div>
+
+  <div class="form-group">
+    <input type="datetime-local" id="date" required />
+    <span class="error" id="dateError"></span>
+  </div>
+
+  <textarea id="message" placeholder="Special Request" rows="4"></textarea>
+
+  <button type="submit" class="submit-btn">Book Now</button>
+
+
+        </form>
+        </div>
+
+        <!-- Back Side -->
+        <div class="card-back">
+          <h2>Be happy 😊</h2>
+          <p>Your table is booked successfully.</p><br>We’re excited to serve you!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bookingTable.js"></script>
+  
+</body>
+</html>

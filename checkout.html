@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout – DineFlavora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.css"/>
+</head>
+<body>
+
+<header class="header">
+  <a href="menu.html" class="back-btn">← Back to Menu</a>
+  <div class="logo"><span style="color: wheat;">Dine</span>Flavora</div>
+</header>
+
+<main class="container">
+  <h1>Checkout</h1>
+
+  <!-- Cart Summary -->
+  <section class="summary">
+    <h2>Order Summary</h2>
+    <div id="summaryList">Loading…</div>
+    <p class="grand-total">Grand Total: <strong id="grandTotal">₨ 0</strong></p>
+  </section>
+
+  <!-- Delivery / Pick-up options -->
+  <section class="options">
+    <label><input type="radio" name="orderType" value="delivery" checked/> Delivery</label>
+    <label><input type="radio" name="orderType" value="pickup"/> Pick-up</label>
+  </section>
+
+  <!-- Checkout Form -->
+  <form id="checkoutForm" class="glass-form">
+    <h2>Your Details</h2>
+
+    <input type="text" placeholder="Full Name" required id="name"/>
+    <input type="tel" placeholder="Phone Number" required id="phone"/>
+    <input type="email" placeholder="Email Address" required id="email"/>
+
+    <div id="addressFields">
+      <input type="text" placeholder="Street Address" id="address"/>
+      <input type="text" placeholder="City" id="city"/>
+    </div>
+
+    <textarea placeholder="Any special instructions?" rows="3"></textarea>
+
+    <button type="submit" class="btn primary">Place Order</button>
+  </form>
+</main>
+
+<script src="checkout.js"></script>
+</body>
+</html>

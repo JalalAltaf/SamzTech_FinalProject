@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – DineFlavora</title>
+  <link rel="stylesheet" href="menu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="logo"><span style="color:wheat;">Dine</span>Flavora</div>
+  
+<nav class="side-nav" id="sideNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="bookingTable.html">Booking Pages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <button id="cartBtn" class="cart-btn">
+    🛒 <span id="cartCount">0</span>
+  </button>
+</header>
+
+<nav class="side-nav-mobile" id="sideNav">
+    <button id="closeNavbar" class="close-btn">&times;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="bookingTable.html">Booking Page</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+<div class="overlay" id="overlay"></div>
+
+<main class="container">
+  <h2 class="page-title">Our Menu</h2>
+
+  <!-- Filter Buttons -->
+  <nav class="filter-nav">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="starters">Starters</button>
+    <button class="filter-btn" data-filter="main">Main Course</button>
+    <button class="filter-btn" data-filter="desserts">Desserts</button>
+    <button class="filter-btn" data-filter="beverages">Beverages</button>
+  </nav>
+
+  <!-- Menu Grid -->
+  <section class="menu-grid" id="menuGrid">
+    <!-- Dynamically filled by JS -->
+  </section>
+</main>
+
+<!-- Cart Modal -->
+<aside id="cartModal" class="cart-modal">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart" class="close-btn">&times;</button>
+  </div>
+  <div id="cartItems" class="cart-items">Your cart is empty.</div>
+  <div class="cart-footer">
+    <strong>Total: PKR <span id="cartTotal">0.00</span></strong>
+    <button id="checkoutBtn" class="btn primary">Checkout</button>
+  </div>
+</aside>
+
+<script src="menu.js"></script>
+</body>
+</html>

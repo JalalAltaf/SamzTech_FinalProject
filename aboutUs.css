@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #4f3e24;
+  color: #ffffff;
+  line-height: 1.0;
+} 
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: rgba(171, 121, 40, 0.15); /* light translucent */
+  backdrop-filter: blur(70%);
+  -webkit-backdrop-filter: blur(70%);
+
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex: 1;
+  color:#ffa339;
+}
+
+/* Center nav-links using absolute positioning and transform */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-links a {
+  color: #ffa339;
+  font-size: x-large;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.book-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+  background-color: #e69500;
+  transform: scale(1.05);
+}
+
+
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.789), rgba(0, 0, 0, 0.34)), url('https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  color: rgb(241, 236, 236);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.highlight {
+  color: orange;
+}
+
+section {
+  padding: 1%;
+}
+
+.story, .choose-us, .services {
+  background:linear-gradient(#3b312f,rgb(255, 189, 122)) ;
+  color: #fff;
+}
+
+
+.story .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.story p {
+    color :white
+}
+
+.story img {
+  flex:1;
+  height: 400px;
+  width: 100% ;  
+  max-width: 600px;
+  border-radius: 10px;
+  
+}
+
+.story-text {
+    flex:1;
+    font-size: x-large;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+.story h2, .choose-us h2, .services h2 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 5%;
+  color: orange;
+}
+
+hr {
+  width: 100px;
+  height: 4px;
+  background: white;
+  margin: 0 auto 2rem;
+  
+}
+
+.choose-us .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 5%;
+}
+
+.feature {
+  background: #efd7bd;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+  height: 350px
+}
+
+.feature h3 , p {
+    color: black;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: orange;
+}
+
+.services .service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 5%
+}
+
+.service-cards h3 , i{
+ color:black;
+}
+.card {
+  background: #ffdfc5;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 20s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.slogan {
+  background: #212121;
+  padding: 3rem;
+  text-align: center;
+}
+
+.slogan h2 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+
+    .hamburger {
+    display: block;
+
+  }
+
+  .hamburger i {
+    color: #fff;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px;
+    background: rgba(59, 49, 47, 0.95);
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+ .logo{
+     text-align: center;
+ }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+    transform: none;
+  }
+
+  .book-btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .story .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card,
+  .feature {
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
+  }
+
+  .story img {
+    margin-bottom: 1rem;
+    border-radius: 40% 40% 0 0;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .hero-text p,
+  .slogan h2 {
+    font-size: 2rem;
+  }
+
+  .story h2, .choose-us h2, .services h2 {
+  font-size: 30px;
+}
+}
